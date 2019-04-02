@@ -32,9 +32,16 @@
             crossorigin="anonymous">
         </script>
 
+        <style>
+            .extra-spacing {
+                margin: 30px;
+            }
+        </style>
+
     </head>
 
     <body>
+
 
         <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -57,9 +64,82 @@
                     <a class="nav-item nav-link" href="/leaderboard">Leaderboard</a>
                 </div>
             </div>
-      </nav>
+        </nav>
 
-      <!-- Data Entry Section -->
+        <div class="extra-spacing"></div>
+
+    
+        <!-- Data Entry Section -->
+        <div class="container">
+            <form>
+
+                <!-- Team 1 Card -->
+                <div class="card">
+                    <div class="card-header text-center">
+                        Team 1
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" 
+                                id="TeamOnePlayerOne" placeholder="Player 1">
+                            </div>
+                            
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" 
+                                id="TeamOnePlayerTwo" placeholder="Player 2">
+                            </div>
+                            
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" 
+                                id="TeamOneScore" placeholder="Score">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extra-spacing"></div>
+
+                <!-- Team 2 Card -->
+                <div class="card">
+                    <div class="card-header text-center">
+                        Team 2
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="row">
+                            
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" 
+                                id="TeamTwoPlayerOne" placeholder="Player 1">
+                            </div>
+                            
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" 
+                                id="TeamTwoPlayerTwo" placeholder="Player 2">
+                            </div>
+                            
+                            <div class="col-md-4 form-group">
+                                <input type="text" class="form-control" 
+                                id="TeamTwoScore" placeholder="Score">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="extra-spacing"></div>
+
+                <!-- Submit -->
+                <button type="button" class="btn btn-secondary btn-lg btn-block">
+                    Submits
+                </button>
+
+            </form>
+            
+        </div>
+
 
     </body>
 </html>
