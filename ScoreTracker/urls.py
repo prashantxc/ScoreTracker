@@ -19,5 +19,7 @@ from ScoreApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Records)
+    path('', Record),
+    # path('match/', NewMatch),
+    path('leaderboard/', Leaderboard),
 ]
