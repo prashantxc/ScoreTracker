@@ -71,7 +71,8 @@
     
         <!-- Data Entry Section -->
         <div class="container">
-            <form>
+            <form action="{% url 'match' %}" role="form" method="POST">
+                {% csrf_token %}
 
                 <!-- Team 1 Card -->
                 <div class="card">
@@ -84,17 +85,17 @@
                             
                             <div class="col-md-4 form-group">
                                 <input type="text" class="form-control" 
-                                id="TeamOnePlayerOne" placeholder="Player 1">
+                                name="TeamOnePlayerOne" placeholder="Player 1">
                             </div>
                             
                             <div class="col-md-4 form-group">
                                 <input type="text" class="form-control" 
-                                id="TeamOnePlayerTwo" placeholder="Player 2">
+                                name="TeamOnePlayerTwo" placeholder="Player 2">
                             </div>
                             
                             <div class="col-md-4 form-group">
                                 <input type="text" class="form-control" 
-                                id="TeamOneScore" placeholder="Score">
+                                name="TeamOneScore" placeholder="Score">
                             </div>
                         </div>
                     </div>
@@ -113,17 +114,17 @@
                             
                             <div class="col-md-4 form-group">
                                 <input type="text" class="form-control" 
-                                id="TeamTwoPlayerOne" placeholder="Player 1">
+                                name="TeamTwoPlayerOne" placeholder="Player 1">
                             </div>
                             
                             <div class="col-md-4 form-group">
                                 <input type="text" class="form-control" 
-                                id="TeamTwoPlayerTwo" placeholder="Player 2">
+                                name="TeamTwoPlayerTwo" placeholder="Player 2">
                             </div>
                             
                             <div class="col-md-4 form-group">
                                 <input type="text" class="form-control" 
-                                id="TeamTwoScore" placeholder="Score">
+                                name="TeamTwoScore" placeholder="Score">
                             </div>
                         </div>
                     </div>
@@ -132,8 +133,8 @@
                 <div class="extra-spacing"></div>
 
                 <!-- Submit -->
-                <button type="button" class="btn btn-secondary btn-lg btn-block">
-                    Submits
+                <button type="submit" class="btn btn-secondary btn-lg btn-block">
+                    Submit
                 </button>
 
             </form>
