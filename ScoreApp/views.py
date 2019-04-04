@@ -32,5 +32,18 @@ def NewMatch(request):
 
 def Leaderboard(request):
     TeamData = Match.objects.order_by('-Score')
+    TopMatches = [[] for _ in range(10)]
 
-    return render(request, 'leaderboard.html', { 'TeamData':TeamData })
+    LastScore, LastRank = None, 0
+    for Matchs in TeamData:
+        if LastRank <= 9:
+            if LastScore is not None and Matchs.Score != LastScore:
+                if LastRank >= 9:
+                    break
+                LastRank += 1
+            LastScore = Matchs.Score
+            TopMatches[LastRank].append(Matchs)
+
+            print(TopMatches, LastRank, LastScore)
+
+    return render(request, 'leaderboard.html', { 'TeamData':TopMatches })

@@ -68,30 +68,32 @@
         </nav>
     
         <!-- Rank Board -->
+
         <div class="container">
-            {% for i in TeamData %}
-            <div class="extra-spacing"></div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="row">
+            {% for Matchs in TeamData %}
+                {% for Data in Matchs %}
+                    <div class="extra-spacing"></div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <h5>#{{ forloop.parentloop.counter }}</h5>
+                                </div>
 
-                        <div class="col-md-1">
-                            <h5>#{{ forloop.counter }}</h5>
+                                <div class="col-md-10 text-center">
+                                    <h5>{{ Data.PlayerOne }} & {{ Data.PlayerTwo }}</h5>
+                                </div>
+
+                                <div class="col-md-1">
+                                    <h5>{{ Data.Score }}</h5>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="col-md-10 text-center">
-                            <h5>{{ i.PlayerOne }} & {{ i.PlayerTwo }}</h5>
-                        </div>
-
-                        <div class="col-md-1">
-                            <h5>{{ i.Score }}</h5>
-                        </div>
-
                     </div>
-                </div>
-            </div>
+                {% endfor %}
             {% endfor %}
         </div>
+        
 
         <div class="extra-spacing"></div>
 
