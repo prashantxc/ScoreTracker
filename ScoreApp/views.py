@@ -32,6 +32,8 @@ def NewMatch(request):
 
 def Leaderboard(request):
     TeamData = Match.objects.order_by('-Score')
+    if not TeamData:
+        TeamData = None
     
     if TeamData is not None:
         TopMatches = [[] for _ in range(10)]
