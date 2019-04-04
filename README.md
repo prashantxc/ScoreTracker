@@ -10,4 +10,6 @@
  - If two teams have same score they are on the same rank.
  - Application supports Desktop as well as Mobile view.
  
+ #### Project build using Python's Django framework with SQLite3 as Database.
+ 
  #### Project is hosted on Heroku --> <a href="https://partido.herokuapp.com/" target="_blank">https://partido.herokuapp.com/</a>
