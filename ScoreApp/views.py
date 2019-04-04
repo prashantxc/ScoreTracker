@@ -6,8 +6,6 @@ from .models import *
 from .utils import AlphaArrange
 from .utils import SaveRecords
 
-from django.views.decorators.csrf import csrf_exempt
-
 
 def Record(request):
     return render(request, 'records.html')
@@ -33,5 +31,6 @@ def NewMatch(request):
 
 
 def Leaderboard(request):
-    count = [1,2,3,4,5,6,7,8,9,10]
-    return render(request, 'leaderboard.html', {'count':count})
+    TeamData = Match.objects.order_by('-Score')
+
+    return render(request, 'leaderboard.html', { 'TeamData':TeamData })
