@@ -3,7 +3,7 @@
 ### Internal name ScoreTracker
 
 **Following are the features:**
- - After match both the teams can enter their final Score with indivial Player Names.
+ - After match both the teams can enter their final Score with individual Player Names.
  - Data didn't submit until both the teams will enter their Score and Player Names.
  - Results are updated after every match on Leaderboard.
  - Leaderboard shows top 10 teams according to their scores.
