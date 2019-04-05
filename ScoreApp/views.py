@@ -26,7 +26,7 @@ def NewMatch(request):
         PlayerOne, PlayerTwo = AlphaArrange(TeamTwoPlayerOne, TeamTwoPlayerTwo)
         SaveRecords(PlayerOne, PlayerTwo, TeamTwoScore)
 
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/leaderboard/')
 
 
 
